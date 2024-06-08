@@ -4,7 +4,7 @@ import {MdStar ,MdOutlineLocalOffer} from "react-icons/md"
 import { NavLink } from 'react-router-dom'
 const Hero = () => {
   return (
-    <section className='relative bg-hero bg-center 
+    <section className='relative bg-cover bg-hero bg-center 
     bg-no-repeat h-screen w-full'>
         <div className='max_padd_container relative top-32 xs:top-52'>
             <h1 className='h1 capitalize max-w-[37rem]'>
