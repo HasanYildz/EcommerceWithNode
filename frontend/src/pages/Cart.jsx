@@ -1,7 +1,8 @@
+import CartItmes from "../components/CartItmes"
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <CartItmes/>
   )
 }
 
