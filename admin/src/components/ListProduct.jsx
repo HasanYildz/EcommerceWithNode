@@ -17,6 +17,19 @@ const ListProduct = () => {
 
   },[])
 
+  const remove_product = async (id) => {
+    await fetch(`http://localhost:4000/removeproduct`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id: id })
+    });
+    await fetchInfo();
+  }
+  
+
   return (
     <div className='p-2 box-border bg-white mb-0 rounded-sm w-full mt-4 sm:p-4 sm:m-7'>
       <h4 className='bold-22 p-5 uppercase'>Product List</h4>
@@ -43,7 +56,9 @@ const ListProduct = () => {
                 <td>${product.old_price}</td>
                 <td>${product.new_price}</td>
                 <td>{product.category}</td>
-                <td><div className='bold-22 pl-6 sm:pl-14'><TbTrash/></div></td>
+                <td><div className='bold-22 pl-6 sm:pl-14'><TbTrash onClick={()=>
+                  remove_product(product.id)
+                }/></div></td>
               </tr>
             ))}
           </tbody>

@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from "react-router-dom"
 import addProduct from "../assets/addproduct.png"
 import listProduct from "../assets/productlist.png"
+import TopZiy from './TopZiy'
 
 const Sidebar = () => {
   return (
@@ -16,6 +17,8 @@ const Sidebar = () => {
         <button className='flexCenter gap-2 rounded-md bg-primary h-14 w-44 medium-16 xs:w-44'><img src={listProduct} alt="" height={55} 
         width={55}/>Product List</button>
         </Link>
+        <Link to={'/visitors'}
+        className='flexCenter gap-2 rounded-md bg-primary h-14 w-44 medium-16 xs:w-44'><img src={TopZiy} alt="" height={55} ></img> Ziyaretçiler </Link>
     </div>
   )
 }

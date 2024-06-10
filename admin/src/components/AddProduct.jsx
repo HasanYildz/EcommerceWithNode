@@ -1,6 +1,7 @@
 import { useState } from "react";
 import upload_area from "../assets/upload_area.svg"
 import {MdAdd} from "react-icons/md"
+
 const AddProduct = () => {
 
     const [image, setImage] = useState(false)
